@@ -1,0 +1,14 @@
+.producto {
+  height: 40px;
+  width: 400px;
+  margin-left: 100px;
+  margin-right: 50px;
+  text-align: center;
+}
+
+.cantidad {
+  height: 40px;
+  width: 400px;
+  margin-right: 50px;
+  text-align: center;
+}
