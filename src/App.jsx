@@ -3,7 +3,11 @@ import "./App.css";
 import ProductForm from "./components/ProductForm";
 
 function App() {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState([
+    { productName: "papas", productQuantity: "5" },
+    { productName: "pan", productQuantity: "10" },
+    { productName: "lechuga", productQuantity: "3" },
+  ]);
 
   const handleValue = (value) => {
     setProducts([value]);
@@ -28,11 +32,6 @@ function App() {
     );
   }
 
-
-
-
-
-
   return (
     <>
       <header>
@@ -43,11 +42,14 @@ function App() {
       </div>
       <div className="listado">
         <h2>Listado</h2>
-        <p>
-          productos, {products[0].productName}-{products[0].productQuantity}
-        </p>
-
-
+        <ul>
+          {products.map((producto, i) => (
+            <li key={i}>
+              {producto.productName}, {producto.productQuantity}
+            </li>
+          ))}
+        </ul>
+        ;
       </div>
     </>
   );
