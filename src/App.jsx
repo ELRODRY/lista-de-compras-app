@@ -1,21 +1,26 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import ProductForm from "./components/ProductForm";
 
 function App() {
-  const [products, setProducts] = useState([
-    { productName: "papas", productQuantity: "5" },
-    { productName: "pan", productQuantity: "10" },
-    { productName: "lechuga", productQuantity: "3" },
-  ]);
-
+  const savedProducts = JSON.parse(localStorage.getItem("InfoProducts")) || [];
+  const [products, setProducts] = useState(savedProducts);
   const handleValue = (value) => {
-    setProducts([value]);
+    setProducts((prevState) => [...prevState, value]);
   };
 
-  console.log(products);
+  useEffect(() => {
+    localStorage.setItem("InfoProducts", JSON.stringify(products));
+  }, [products]);
 
-  if (products.length == 0) {
+  const handleDelete = (borrarProducto) => {
+    const nuevosProductos = products.filter(
+      (producto) => producto !== borrarProducto
+    );
+    setProducts(nuevosProductos);
+  };
+
+  if (!products.length) {
     return (
       <>
         <header>
@@ -45,11 +50,11 @@ function App() {
         <ul>
           {products.map((producto, i) => (
             <li key={i}>
-              {producto.productName}, {producto.productQuantity}
+              {producto.productName} {producto.productQuantity}
+              <button onClick={() => handleDelete(producto)}>Delete</button>
             </li>
           ))}
         </ul>
-        ;
       </div>
     </>
   );
