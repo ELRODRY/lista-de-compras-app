@@ -20,14 +20,13 @@ const ProductForm = (props) => {
         setProductValue(""), setQuantityValue("");
     };
 
-    // onInputs({ productName: productValue, productQuantity: quantityValue });
-
     return (
         <>
             <input
                 className="producto"
                 autoFocus
                 type="text"
+                maxlength="25"
                 onChange={(e) => onChangeProduct(e.target.value)}
                 placeholder="PRODUCTO"
                 value={productValue}
@@ -36,6 +35,7 @@ const ProductForm = (props) => {
             <input
                 className="cantidad"
                 type="text"
+                maxlength="10"
                 placeholder="CANTIDAD"
                 onChange={(e) => onChangeQuantity(e.target.value)}
                 value={quantityValue}

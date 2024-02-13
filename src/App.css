@@ -26,7 +26,6 @@ header {
 }
 
 .listado {
-  border: solid 1px violet;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
@@ -35,4 +34,31 @@ header {
 
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+}
+
+li {
+  border: solid 1px rgb(9, 255, 0);
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.productoLista {
+  color: blue;
+  flex: 1;
+}
+
+.cantidadLista {
+  flex: 1;
+  color: brown;
+}
+
+.buttonDelete {
+  background-color: aqua;
 }

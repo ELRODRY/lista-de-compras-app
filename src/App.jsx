@@ -50,8 +50,8 @@ function App() {
         <ul>
           {products.map((producto, i) => (
             <li key={i}>
-              {producto.productName} {producto.productQuantity}
-              <button onClick={() => handleDelete(producto)}>Delete</button>
+              <p className="productoLista">Prodcuto: {producto.productName}</p> <p className="cantidadLista">Cantidad: {producto.productQuantity}</p>
+              <button className="buttonDelete" onClick={() => handleDelete(producto)}>Delete</button>
             </li>
           ))}
         </ul>
