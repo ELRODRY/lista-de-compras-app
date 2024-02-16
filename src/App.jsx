@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import ProductForm from "./components/ProductForm";
+import TrashcanIcon from "./assets/trashIcon"
+
 
 function App() {
   const savedProducts = JSON.parse(localStorage.getItem("InfoProducts")) || [];
   const [products, setProducts] = useState(savedProducts);
+
   const handleValue = (value) => {
     setProducts((prevState) => [...prevState, value]);
   };
@@ -51,7 +54,7 @@ function App() {
           {products.map((producto, i) => (
             <li key={i}>
               <p className="productoLista">Prodcuto: {producto.productName}</p> <p className="cantidadLista">Cantidad: {producto.productQuantity}</p>
-              <button className="buttonDelete" onClick={() => handleDelete(producto)}>Delete</button>
+              <button className="buttonDelete" onClick={() => handleDelete(producto)}><TrashcanIcon /></button>
             </li>
           ))}
         </ul>

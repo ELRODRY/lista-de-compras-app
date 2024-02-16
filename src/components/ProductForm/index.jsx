@@ -1,6 +1,7 @@
 import "./productForm.styles.css";
 import { useState } from "react";
 
+
 const ProductForm = (props) => {
     const [productValue, setProductValue] = useState("");
     const [quantityValue, setQuantityValue] = useState("");
@@ -26,7 +27,7 @@ const ProductForm = (props) => {
                 className="producto"
                 autoFocus
                 type="text"
-                maxlength="25"
+                maxLength="25"
                 onChange={(e) => onChangeProduct(e.target.value)}
                 placeholder="PRODUCTO"
                 value={productValue}
@@ -35,14 +36,14 @@ const ProductForm = (props) => {
             <input
                 className="cantidad"
                 type="text"
-                maxlength="10"
+                maxLength="10"
                 placeholder="CANTIDAD"
                 onChange={(e) => onChangeQuantity(e.target.value)}
                 value={quantityValue}
             />
 
             <button className="buttonAdd" onClick={triggerClick}>
-                +
+
             </button>
         </>
     );
