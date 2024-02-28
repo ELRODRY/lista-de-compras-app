@@ -2,6 +2,7 @@ import "./productForm.styles.css";
 import { useState } from "react";
 
 
+
 const ProductForm = (props) => {
     const [productValue, setProductValue] = useState("");
     const [quantityValue, setQuantityValue] = useState("");

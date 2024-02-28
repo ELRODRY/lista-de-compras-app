@@ -26,21 +26,24 @@ function App() {
   if (!products.length) {
     return (
       <>
-        <header>
-          <h1>Lista de Compras</h1>
-        </header>
-        <div className="containerInputs">
-          <ProductForm productAdd={(value) => handleValue(value)} />
-        </div>
-        <div className="listado">
-          <h2>Listado</h2>
-          <p>No hay peoductos añadidos</p>
+        <div id="containerAll">
+          <header>
+            <h1>Lista de Compras</h1>
+          </header>
+          <div className="containerInputs">
+            <ProductForm productAdd={(value) => handleValue(value)} />
+          </div>
+          <div className="listado">
+            <h2>Listado</h2>
+            <p>No hay peoductos añadidos</p>
+          </div>
         </div>
       </>
     );
   }
 
   return (
+
     <>
       <header>
         <h1>Lista de Compras</h1>
@@ -59,7 +62,9 @@ function App() {
           ))}
         </ul>
       </div>
+
     </>
+
   );
 }
 

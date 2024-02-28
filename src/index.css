@@ -10,10 +10,11 @@
 }
 
 body {
-  border: solid 1px red;
-  min-height: 100vh;
+  box-sizing: border-box;
+  background-color: bisque;
+  border: solid red 1px;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  background-color: rgb(245, 235, 222);
+  min-width: 200px;
 }

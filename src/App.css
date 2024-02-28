@@ -3,26 +3,25 @@
   box-sizing: border-box;
 }
 
+#containerAll {
+  display: flex;
+  flex-direction: column;
+}
+
 header {
-  border: solid 2px green;
-  width: 100%;
+  margin-top: 20px;
   text-align: center;
 }
 
 .containerInputs {
-  border: solid 1px rgb(10, 10, 10);
-  width: 100%;
   margin-top: 20px;
   height: 50px;
   display: flex;
   align-items: center;
-}
-
-.buttonAdd {
-  height: 35px;
-  width: 35px;
-  font-size: 30px;
-  background-color: gold;
+  justify-content: center;
+  padding: 5px;
+  width: 100%;
+  min-width: 100px;
 }
 
 .listado {
@@ -30,13 +29,14 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: solid 1px violet;
 }
 
 ul {
+  width: 80%;
   list-style: none;
   margin: 0;
   padding: 0;
-  width: 100%;
 }
 
 li {
@@ -47,6 +47,7 @@ li {
   margin-bottom: 10px;
   padding: 6px 3px 5px 6px;
   align-items: center;
+  width: 100%;
 }
 
 .productoLista {
@@ -55,11 +56,114 @@ li {
 }
 
 .cantidadLista {
-  flex: 1;
   color: rgb(56, 56, 56);
+  flex: 1;
 }
 
 .buttonDelete {
   background-color: rgb(255, 0, 0);
   border-radius: 50px;
+}
+
+@media (max-width: 950px) {
+  .listado {
+    width: 750px;
+  }
+
+  ul {
+    width: 90%;
+  }
+
+  .containerInputs {
+    width: 750px;
+  }
+}
+
+@media (max-width: 790px) {
+  .listado {
+    width: 600px;
+  }
+
+  ul {
+    width: 90%;
+  }
+
+  .containerInputs {
+    width: 600px;
+  }
+}
+
+@media (max-width: 650px) {
+  .listado {
+    width: 450px;
+  }
+
+  ul {
+    width: 90%;
+  }
+
+  .containerInputs {
+    width: 500px;
+  }
+}
+
+@media (max-width: 530px) {
+  .listado {
+    width: 450px;
+  }
+
+  ul {
+    width: 90%;
+  }
+  .containerInputs {
+    width: 450px;
+  }
+}
+
+@media (max-width: 450px) {
+  .listado {
+    width: 420px;
+  }
+  ul {
+    width: 90%;
+  }
+  .containerInputs {
+    width: 420px;
+  }
+}
+
+@media (max-width: 430px) {
+  .listado {
+    width: 400px;
+  }
+  ul {
+    width: 90%;
+  }
+  .containerInputs {
+    width: 400px;
+  }
+}
+
+@media (max-width: 420px) {
+  .listado {
+    width: 350px;
+  }
+  ul {
+    width: 90%;
+  }
+  .containerInputs {
+    width: 350px;
+  }
+}
+
+@media (max-width: 415px) {
+  .listado {
+    width: 300px;
+  }
+  ul {
+    width: 90%;
+  }
+  .containerInputs {
+    width: 300px;
+  }
 }
