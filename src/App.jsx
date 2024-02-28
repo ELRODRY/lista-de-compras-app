@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import ProductForm from "./components/ProductForm";
-import TrashcanIcon from "./assets/trashIcon"
-
+import TrashcanIcon from "./assets/trashIcon";
 
 function App() {
   const savedProducts = JSON.parse(localStorage.getItem("InfoProducts")) || [];
@@ -43,7 +42,6 @@ function App() {
   }
 
   return (
-
     <>
       <header>
         <h1>Lista de Compras</h1>
@@ -56,15 +54,23 @@ function App() {
         <ul>
           {products.map((producto, i) => (
             <li key={i}>
-              <p className="productoLista"><strong>Producto:</strong> {producto.productName}</p> <p className="cantidadLista"><strong>Cantidad:</strong> {producto.productQuantity}</p>
-              <button className="buttonDelete" onClick={() => handleDelete(producto)}><TrashcanIcon /></button>
+              <p className="productoLista">
+                <strong>Producto:</strong> {producto.productName}
+              </p>{" "}
+              <p className="cantidadLista">
+                <strong>Cantidad:</strong> {producto.productQuantity}
+              </p>
+              <button
+                className="buttonDelete"
+                onClick={() => handleDelete(producto)}
+              >
+                <TrashcanIcon />
+              </button>
             </li>
           ))}
         </ul>
       </div>
-
     </>
-
   );
 }
 

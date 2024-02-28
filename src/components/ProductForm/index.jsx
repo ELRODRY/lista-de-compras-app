@@ -1,8 +1,6 @@
 import "./productForm.styles.css";
 import { useState } from "react";
 
-
-
 const ProductForm = (props) => {
     const [productValue, setProductValue] = useState("");
     const [quantityValue, setQuantityValue] = useState("");
@@ -43,9 +41,7 @@ const ProductForm = (props) => {
                 value={quantityValue}
             />
 
-            <button className="buttonAdd" onClick={triggerClick}>
-
-            </button>
+            <button className="buttonAdd" onClick={triggerClick}></button>
         </>
     );
 };
