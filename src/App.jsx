@@ -56,7 +56,7 @@ function App() {
         <ul>
           {products.map((producto, i) => (
             <li key={i}>
-              <p className="productoLista">Prodcuto: {producto.productName}</p> <p className="cantidadLista">Cantidad: {producto.productQuantity}</p>
+              <p className="productoLista"><strong>Producto:</strong> {producto.productName}</p> <p className="cantidadLista"><strong>Cantidad:</strong> {producto.productQuantity}</p>
               <button className="buttonDelete" onClick={() => handleDelete(producto)}><TrashcanIcon /></button>
             </li>
           ))}
