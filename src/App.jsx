@@ -3,6 +3,7 @@ import "./App.css";
 import ProductForm from "./components/ProductForm";
 import TrashcanIcon from "./assets/trashIcon";
 
+
 function App() {
   const savedProducts = JSON.parse(localStorage.getItem("InfoProducts")) || [];
   const [products, setProducts] = useState(savedProducts);

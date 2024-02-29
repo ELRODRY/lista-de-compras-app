@@ -1,5 +1,6 @@
 import "./productForm.styles.css";
 import { useState } from "react";
+// import AddIcon from "../../assets/add.svg"
 
 const ProductForm = (props) => {
     const [productValue, setProductValue] = useState("");

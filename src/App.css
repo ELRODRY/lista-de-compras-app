@@ -46,7 +46,7 @@ ul {
 }
 
 li {
-  border: solid 1px rgb(0, 3, 199);
+  border: solid 3px rgb(0, 3, 199);
   border-radius: 10px;
   display: flex;
   margin-top: 10px;
