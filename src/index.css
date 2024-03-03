@@ -4,8 +4,7 @@
 
 body {
   box-sizing: border-box;
-  border: solid 1px red;
-  background-color: bisque;
+  background-color: #f0ead6;
   height: 100vh;
   display: flex;
   align-items: center;

@@ -1,6 +1,6 @@
 import "./productForm.styles.css";
 import { useState } from "react";
-// import AddIcon from "../../assets/add.svg"
+import Add from "../../assets/add";
 
 const ProductForm = (props) => {
     const [productValue, setProductValue] = useState("");
@@ -41,8 +41,11 @@ const ProductForm = (props) => {
                 onChange={(e) => onChangeQuantity(e.target.value)}
                 value={quantityValue}
             />
-
-            <button className="buttonAdd" onClick={triggerClick}></button>
+            <div className="buttonAddContainer">
+                <button className="buttonAdd" onClick={triggerClick}>
+                    <Add />
+                </button>
+            </div>
         </>
     );
 };

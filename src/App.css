@@ -39,14 +39,14 @@ h2 {
 }
 
 ul {
-  width: 90%;
+  width: 100%;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 li {
-  border: solid 3px rgb(0, 3, 199);
+  border: solid 3px #3c3a35;
   border-radius: 10px;
   display: flex;
   margin-top: 10px;
@@ -54,6 +54,7 @@ li {
   padding: 6px 3px 5px 6px;
   align-items: center;
   width: 100%;
+  background-color: #ffb44b;
 }
 
 .productoLista {
@@ -62,7 +63,7 @@ li {
 }
 
 .cantidadLista {
-  color: rgb(56, 56, 56);
+  color: black;
   flex: 1;
 }
 
