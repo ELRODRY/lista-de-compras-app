@@ -34,7 +34,7 @@ function App() {
           </div>
           <div className="listado">
             <h2>Listado</h2>
-            <p>No hay peoductos añadidos</p>
+            <p>No hay productos añadidos</p>
           </div>
         </div>
       </>
@@ -75,3 +75,4 @@ function App() {
 }
 
 export default App;
+
